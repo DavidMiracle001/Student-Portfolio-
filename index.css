@@ -1,0 +1,337 @@
+/* Stage 2: Set up the overall visual theme, colors, and reusable design variables */
+:root {
+  color-scheme: light;
+  --bg: hsl(228, 100%, 98%);
+  --surface: hsl(0, 0%, 100%);
+  --text: hsl(220, 13%, 17%);
+  --muted: hsl(220, 13%, 47%);
+  --primary: hsl(0, 91%, 35%);
+  --primary-dark: hsl(231, 50%, 20%);
+  --border: hsl(0, 95%, 42%);
+  --success: hsl(149, 70%, 35%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f8faff 0%, var(--bg) 100%);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 0.25rem 0;
+}
+
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Stage 2B: Style the main content cards and section containers */
+.Mimi,
+.contact-info,
+.section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+}
+
+.Mimi {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Faith {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Stage 2E: Responsive image and SVG sizing for portrait */
+.Mimi-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Mimi-visual svg,
+.Mimi-visual img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.about-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.project-card,
+.task-panel,
+.contact-form,
+.radio-group,
+.planner-form {
+  background: #f9fbff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.project-visual {
+  height: 140px;
+  border-radius: 14px;
+  margin-bottom: 0.8rem;
+}
+
+.gradient-one {
+  background: linear-gradient(135deg, #818cf8, #38bdf8);
+}
+
+.gradient-two {
+  background: linear-gradient(135deg, #fb923c, #facc15);
+}
+
+.gradient-three {
+  background: linear-gradient(135deg, #34d399, #2563eb);
+}
+
+/* Stage 2C: Arrange the planner and contact areas with flexible grid layouts */
+.planner-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1rem;
+}
+
+.planner-form,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0.9rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.task-item.completed {
+  background: #ecfdf3;
+  border-color: #a7f3d0;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--success);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.complete-btn {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.form-message {
+  min-height: 1.2rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+/* Stage 2D: Add responsive rules so the site adapts to smaller screens */
+@media (max-width: 800px) {
+  .Mimi,
+  .planner-layout,
+  .about-grid,
+  .project-grid,
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .Mimi {
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .site-nav {
+    gap: 0.65rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .Mimi,
+  .section {
+    padding: 1.2rem;
+    border-radius: 18px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}

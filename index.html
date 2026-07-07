@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portfolio & Academic Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Stage 1: Build the main page structure with navigation and content sections -->
+    <header class="site-header">
+      <div class="brand">ODAMA MIRCLE AKWANUFO</div>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#planner">Planner</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Stage 1A: Create the homepage Mimi section with welcome text and portrait -->
+      <section id="home" class="Mimi">
+        <div class="Mimi-copy">
+          <p class="Faith">Welcome to my portfolio</p>
+          <h1>ODAMA MIRCLE AKWANUFO</h1>
+          <p class="lead">
+            I am a curious student at the Miva Open University, passionate about
+            exploring technology and new skills with the aim of becoming a
+            renown programmer.
+          </p>
+          <p>You can contact me via:</p>
+          <ul>
+            <li>odama.davidmiracle21@gmail.com</li>
+            <li>m.odama7975@miva.edu.ng</li>
+            <li>+234 703 350 3637</li>
+          </ul>
+          <a class="btn btn-primary" href="#projects">View My Projects</a>
+        </div>
+        <div class="Mimi-visual" aria-label="Student portrait">
+          <img src="image/Odama Miracle.png" alt="Portrait of Odama Miracle" />
+        </div>
+      </section>
+
+      <!-- Stage 1B: Add the About Me section with educational and personal details -->
+      <section id="about" class="section">
+        <div class="section-heading">
+          <p class="Faith">About Me</p>
+          <h2>Building skills with purpose</h2>
+        </div>
+        <div class="about-grid">
+          <article class="card">
+            <h3>Educational Background</h3>
+            <p>
+              I am a first-year Computer Science student with strong interest in
+              Full-stack web development, Artificial Intelligence(AI), Machine
+              Language(ML) and Robotics.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Career Aspirations</h3>
+            <p>
+              I aim to become a programmer with the knowledge of full stack
+              engineer, AI/ML engineer and Robotics who creates accessible and
+              responsive tools for learners and communities.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Technical Skills</h3>
+            <p>
+              HTML, CSS, JavaScript, C, Wordpress, elementor and responsive
+              design, and problem-solving with collaboration tools.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Hobbies & Interests</h3>
+            <p>Reading, photography,and exploring new technologies.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Stage 1C: Display three project cards with descriptions and links -->
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="Faith">Projects</p>
+          <h2>Odama Miracle Akwanufo projects</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual gradient-one"></div>
+            <h3>Study Hub Dashboard</h3>
+            <p>
+              A productivity dashboard that helps students track deadlines,
+              notes, and study goals, free times all in one place.
+            </p>
+            <a href="https://example.com" target="_blank" rel="noreferrer"
+              >Open simulation</a
+            >
+          </article>
+          <article class="project-card">
+            <div class="project-visual gradient-two"></div>
+            <h3>Learning Quiz App</h3>
+            <p>An interactive quiz app with instant feedback.</p>
+            <a href="https://example.com" target="_blank" rel="noreferrer"
+              >Open simulation</a
+            >
+          </article>
+          <article class="project-card">
+            <div class="project-visual gradient-three"></div>
+            <h3>Campus Event Planner</h3>
+            <p>
+              A simple event-planning web app designed to organize club
+              activities and student gatherings called "This House".
+            </p>
+            <a href="https://example.com" target="_blank" rel="noreferrer"
+              >Open simulation</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Stage 1D: Add the academic planner section with a task form and task list -->
+      <section id="planner" class="section planner-section">
+        <div class="section-heading">
+          <p class="Faith">Academic Planner</p>
+          <h2>Stay on top of your study goals</h2>
+        </div>
+        <div class="planner-layout">
+          <form id="task-form" class="planner-form">
+            <label for="task-input">New task</label>
+            <input
+              id="task-input"
+              name="task"
+              type="text"
+              placeholder="Add a new assignment or goal"
+            />
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </form>
+          <div class="task-panel">
+            <h3>My tasks</h3>
+            <ul id="task-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage 1E: Create the contact form for visitor messages -->
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <p class="Faith">Contact</p>
+          <h2>Let’s connect</h2>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="field-row">
+            <label>
+              Name
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your First Name Only"
+                minlength="4"
+                maxlength="10"
+                required
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Example@gmail.com"
+                required
+              />
+            </label>
+          </div>
+          <label>
+            Phone Number
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+234 000 000 0000"
+              minlength="8"
+              maxlength="15"
+              required
+            />
+          </label>
+          <label>
+            Message
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Type in your message"
+              required
+            ></textarea>
+          </label>
+          <label for="title">Title</label>
+          <div class="radio-group">
+            <label>
+              Mr.
+              <input
+                type="radio"
+                id="title-mr"
+                name="title"
+                value="Mr."
+                required
+              />
+            </label>
+            <label>
+              Mrs.
+              <input
+                type="radio"
+                id="title-mrs"
+                name="title"
+                value="Mrs."
+                required
+              />
+            </label>
+            <label>
+              Ms.
+              <input
+                type="radio"
+                id="title-ms"
+                name="title"
+                value="Ms."
+                required
+              />
+            </label>
+            <label>
+              PhD.
+              <input
+                type="radio"
+                id="title-phd"
+                name="title"
+                value="PhD."
+                required
+              />
+            </label>
+          </div>
+
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+          <div class="form-actions">
+            <button type="reset" class="btn btn-primary">Reset</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+        <hr />
+        <div class="contact-info">
+          <p>THIS HOUSE © 2026 | Abuja • Nigeria</p>
+          <p>Contact: odamamiracle21@gmail.com | m.odama7975@miva.edu.ng</p>
+          <p>Main Address: NO.11 Taken Estate Masaka</p>
+          <p>State: Nasarawa</p>
+          <p>Contact-tel: 08056109604</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
